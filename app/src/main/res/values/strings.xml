@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Fake_Insta</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">NFIKJaw5lwPYnahSf23iP1UyMcA11f98e7zwZ3eR</string>
+    <string name="back4app_client_key">TeAO7VVcA5cZZTFjd0T4M1KMNg1VZ1cKoh12Uu3F</string>
+    <string name="insert_the_funny">Insert the funny</string>
+    <string name="picture_heehee">Picture Heehee</string>
+</resources>
