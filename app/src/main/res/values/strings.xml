@@ -8,4 +8,6 @@
     <string name="back4app_client_key">TeAO7VVcA5cZZTFjd0T4M1KMNg1VZ1cKoh12Uu3F</string>
     <string name="insert_the_funny">Insert the funny</string>
     <string name="picture_heehee">Picture Heehee</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
