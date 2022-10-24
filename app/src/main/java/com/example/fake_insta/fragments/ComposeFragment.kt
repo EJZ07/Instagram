@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
@@ -40,20 +41,26 @@ class ComposeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_compose, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getActivity()?.getActionBar()?.hide();
 
         ivPreview = view.findViewById(R.id.imageView2)
         //Set onclick
         view.findViewById<ImageButton>(R.id.btnSubmit).setOnClickListener {
             //send post without an image
             //Get the description that they have inputted
+
+
             val description = view.findViewById<EditText>(R.id.description).text.toString()
             val user = ParseUser.getCurrentUser()
+
             if (photoFile != null) {
                 submitPost(description, user, photoFile!!)
             }else{
@@ -112,6 +119,7 @@ class ComposeFragment : Fragment() {
         post.setDescription(description)
         post.setUser(user)
         post.setImage(ParseFile(file))
+        post.setpImage(ParseFile(file))
         post.saveInBackground { exception ->
             if (exception != null) {
                 // Something has went wrong

@@ -10,15 +10,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="411dp"
-        android:layout_height="381dp"
+        android:layout_width="410dp"
+        android:layout_height="288dp"
+        android:contentDescription="@string/picture_heehee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
-        android:contentDescription="@string/picture_heehee" />
-
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -51,7 +50,7 @@
     <ImageButton
         android:id="@+id/btnTakePicture"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="64dp"
         android:backgroundTint="@color/black"

@@ -66,33 +66,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<BottomNavigationView>(R.id.bottom_navigation).selectedItemId = R.id.action_home
 
-        queryPosts()
+        //queryPosts()
     }
 
     // Returns the File for a photo stored on disk given the fileName
 
-    // Query for all posts in our server
-    fun queryPosts() {
-        val query: ParseQuery<Post> = ParseQuery.getQuery(Post::class.java)
-        //Find all the post objects in our server
-        query.include(Post.KEY_USER)
-
-        query.findInBackground(object : FindCallback<Post> {
-            override fun done(posts: MutableList<Post>?, e: ParseException?) {
-                if (e != null) {
-                    //something went wrong
-                    Log.e(TAG, "Error fetching posts")
-                } else {
-                    if(posts != null){
-                        for (post in posts) {
-                            Log.i(TAG, "Post: " + post.getDescription() + " , username: " + post.getUser()?.username)
-                        }
-                    }
-                }
-            }
-
-        })
-    }
 
     companion object {
         const val TAG = "MainActivity"
